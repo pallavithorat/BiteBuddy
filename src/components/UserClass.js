@@ -26,7 +26,7 @@ class UserClass extends React.Component {
         location: "Default",
       },
     };
-    console.log(this.props.name + "Child Constructor");
+    //console.log(this.props.name + "Child Constructor");
   }
 
   async componentDidMount() {
@@ -45,11 +45,11 @@ class UserClass extends React.Component {
   }
 
   componentDidUpdate() { 
-    console.log("Component Did Update");
+    //console.log("Component Did Update");
   }
 
   componentWillUnmount() {
-    console.log("Component Will Unmount");
+   // console.log("Component Will Unmount");
   }
   
   render() {

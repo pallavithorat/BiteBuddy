@@ -1,7 +1,9 @@
 import { CDN_URL } from "../utils/constants";
-
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 const RestaurantCard = (props) => {
   const { resData } = props;
+  const { loggedInUser } = useContext(UserContext);
 
   const {
     cloudinaryImageId,
@@ -24,8 +26,23 @@ const RestaurantCard = (props) => {
       <h4>{avgRating} stars</h4>
       <h4>{costForTwo}</h4>
       <h4>{sla?.slaString}</h4>
+      <h4>User : {loggedInUser} </h4>
     </div>
   );
+};
+
+//HIGHER ORDER COMPONENT
+export const withPromtedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">
+          Promoted
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;
