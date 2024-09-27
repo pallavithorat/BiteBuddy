@@ -8,13 +8,13 @@ import { useState } from "react";
 
 const RestaurantMenu = () => {
 
-  const { resId } = useParams();
+  const { resId } = useParams(); // Retrieve the restaurant ID from URL params
   const dummy = "Dummy Data";
 
   console.log(useParams());
 
 
-  const resInfo = useRestaurantMenu(resId);
+  const resInfo = useRestaurantMenu(resId); // Fetch restaurant info using the custom hook
   const [showIndex, setShowIndex] = useState(null);
 
   if (resInfo === null) return <Shimmer />;
