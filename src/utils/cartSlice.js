@@ -5,7 +5,7 @@ const cartSlice = createSlice({
   initialState: {
     items: [],
   },
-  reducers: {
+  reducers: {//reducer fun modifies the cart(slice of store)
     addItem: (state, action) => {
       // Redux Toolkit uses immer BTS
       state.items.push(action.payload);
@@ -23,6 +23,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addItem, removeItem, clearCart } = cartSlice.actions;
+export const { addItem, removeItem, clearCart } = cartSlice.actions;//actions
 
-export default cartSlice.reducer;
+export default cartSlice.reducer;   

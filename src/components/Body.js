@@ -1,6 +1,3 @@
-import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
-import { useState, useEffect } from "react";
 import RestaurantCard, { withPromtedLabel } from "./RestaurantCard";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "./shimmer";
@@ -63,6 +60,7 @@ const Body = () => {
       <div className="search m-4 p-4">
           <input
             type="text"
+            
             className="border border-solid border-black"
             value={searchText}
             onChange={(e) => {
